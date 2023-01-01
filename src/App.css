@@ -1,0 +1,125 @@
+:root {
+  --background-clr: #f1f5f8;
+  --primary-clr-1: #617da1;
+  --primary-clr: #c59d5f;
+
+  --letter-spacing: 0.05rem;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-clr);
+  letter-spacing: var(--letter-spacing);
+}
+
+.container {
+  width: 80vw;
+  margin: auto;
+}
+.container header {
+  margin: 2rem 0;
+}
+
+.container header h1 {
+  text-align: center;
+  position: relative;
+}
+.container header h1::after {
+  content: "";
+  position: absolute;
+  background-color: #c59d5f;
+  width: 70px;
+  height: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.5rem;
+}
+
+.menus {
+  display: block;
+  margin: 30px auto;
+}
+@media screen and (min-width: 1115px) {
+  .menus {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+.menus .single-menu {
+  width: 480px;
+  grid-template-columns: 180px 300px;
+  display: grid;
+  align-items: center;
+}
+@media screen and (max-width: 1115px) {
+  .menus .single-menu {
+    margin: 50px auto;
+  }
+}
+.menus .single-menu .img-container {
+  width: 170px;
+  height: 120px;
+  border: 3px solid var(--primary-clr);
+  border-radius: 5px;
+}
+.menus .single-menu img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menus .single-menu h4 {
+  padding: 10px 0;
+}
+.menus .single-menu p {
+  color: var(--primary-clr-1);
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+  padding: 10px 0;
+}
+
+.menus .single-menu .info .title-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(
+    to right,
+    rgb(156, 156, 156) 33%,
+    rgba(164, 160, 160, 0) 0%
+  );
+  background-position: bottom;
+  background-size: 3px 1px;
+  background-repeat: repeat-x;
+}
+.menus .single-menu .info .title-price .price {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-clr);
+}
+.btns-container {
+  width: fit-content;
+  margin: auto;
+}
+
+.btns-container button {
+  margin: 0 10px;
+  background: transparent;
+  border: none;
+  letter-spacing: 0.12rem;
+  color: var(--primary-clr);
+  font-size: 0.9rem;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.5s;
+}
+.btns-container button:hover {
+  background-color: var(--primary-clr);
+  color: white;
+}
